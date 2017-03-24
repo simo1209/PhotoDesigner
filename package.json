@@ -2,7 +2,7 @@
   "name": "photo_designer",
   "version": "1.0.0",
   "description": "(Draw part)Application for online image editing which supports printing  on different paper.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "live-server"
   },
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/simo1209/PhotoDesigner/issues"
   },
-  "homepage": "https://github.com/simo1209/PhotoDesigner#readme"
+  "homepage": "https://github.com/simo1209/PhotoDesigner#readme",
+  "dependencies": {
+    "eslint": "^3.18.0"
+  }
 }
