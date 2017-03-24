@@ -1,8 +1,10 @@
 class Layer{
-    constructor(corners,data){
+    constructor(corners,data,type){
         this.data=data;
         this.upperCorner=corners[0];
         this.downCorner=corners[1];
+        this.type=type;
+        //this.lengths = p5.Vector.add(this.firstCorner, this.secondCorner);
     }
 
     getData(){
@@ -38,5 +40,35 @@ class Layer{
         this.downCorner=corner;
     }
 
+    draw(){
+        switch (this.type){
+            case "text":
+                //this.lengths = p5.Vector.add(this.firstCorner, this.secondCorner);
+                fill(255);
+                text(this.data,this.upperCorner.x,this.upperCorner.y,this.downCorner.x,this.downCorner.y);
+                break;
+            case "image":
+                imageMode(CORNERS);
+                image(
+                    this.data, 
+                    this.upperCorner.x,
+                    this.upperCorner.y,
+                    this.downCorner.x,
+                    this.downCorner.y
+                );
+                break;
+        }
+    }
 
+    drawBorder(){
+        rectMode(CORNERS);
+        fill(0, 0, 0, 0);
+        stroke(255);
+        rect(
+            this.upperCorner.x, 
+            this.upperCorner.y, 
+            this.downCorner.x, 
+            this.downCorner.y
+        );
+    }
 }

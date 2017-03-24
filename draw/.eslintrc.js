@@ -8,6 +8,14 @@ module.exports = {
     "env": {
         "browser": true
     },
+    "globals":{
+        "setup":true,
+        "text":false,
+        "rect":false,
+        "width":false,
+        "height":false,
+        "createVector":false
+    },
     "extends": "eslint:recommended",
     "rules": {
         "indent": [
