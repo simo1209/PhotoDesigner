@@ -1,6 +1,6 @@
 import Image
 import PSDraw
-im = Image.open("lena.ppm")
+im = Image.open("  .png")
 title = "lena" # Title not necessary
 
 box = (1*72, 2*72, 7*72, 10*72) # In points
