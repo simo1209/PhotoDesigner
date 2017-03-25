@@ -2,31 +2,24 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 6
     },
-    ecmaFeatures:{
-        classes:true
+    ecmaFeatures: {
+        classes: true
     },
     "env": {
         "browser": true
     },
-    "globals":{
-        "setup":true,
-        "text":false,
-        "rect":false,
-        "width":false,
-        "height":false,
-        "createVector":false
-    },
+    
     "extends": "eslint:recommended",
     "rules": {
-        "indent": [
-            "off",
-            "tab"
+        "no-unused-vars":[
+            "off"
         ],
         "no-undef":[
             "off"
         ],
-        "no-unused-vars":[
-            "off"
+        "indent": [
+            "off",
+            "tab"
         ],
         "linebreak-style": [
             "error",

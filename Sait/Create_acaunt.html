@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Create profile</title>
+    <meta charset="utf-8">
+    <link href="oformlenie.css" rel="stylesheet" type="text/css">
+    <link href="container.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="butoni">
+      <A HREF="home.html"><button class="button" onclick="/"> Home </button></A>
+      <A HREF="your_profile.html"><button class="button" onvlick="/"> My Profile </button></A>
+      <A HREF="/"><button class="button" onclick="/"> Programe </button></A>
+    </div>
+    <div ID="zaglavie">Here you can create your profile</div>
+    <form class="imputi" method="post" action="/register/">
+      <div ID="ukazanie"><label class="imput1" for="email"> Your Email: </label></div>
+      <input class="imput" type="text" name="email">
+
+      <div ID="ukazanie"><label class="imput1" for="uname"> Username: </label></div>
+      <input class="imput" type="text" name="uname">
+
+      <div ID="ukazanie"><label class="imput1" for="paswd"> Password: </label></div>
+      <input class="imput" type="password" name="passwd">
+
+      <div ID="ukazanie"><label class="imput1" for="confPasswd"> Confirm Password: </label></div>
+      <input class="imput" type="password" name="confPasswd">
+
+      <input class="imput1" type="submit" value="Submit" name="submit">
+    </form>
+    <div class="butoni" ID="butoni1">
+      <A HREF="/"><button class="button" onvlick="/"> Bulgarian </button></A>
+      <A HREF="/"><button class="button" onclick="/"> English </button></A>
+    </div>
+  </body>
+</html>

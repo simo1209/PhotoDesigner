@@ -4,11 +4,27 @@ class Layer{
         this.upperCorner=corners[0];
         this.downCorner=corners[1];
         this.type=type;
-        //this.lengths = p5.Vector.add(this.firstCorner, this.secondCorner);
+        this.lengths = p5.Vector.add(this.upperCorner, this.downCorner);
     }
+
+    
 
     getData(){
         return this.data;
+    }
+
+    getCenter(){
+        this.lengths = p5.Vector.add(this.upperCorner, this.downCorner);
+        return p5.Vector.div(this.lengths,2);
+    }
+
+    setCenter(center){
+        this.lengths = p5.Vector.sub(this.getDownCorner(), this.getUpperCorner());
+         
+        this.setCorners([
+            createVector(center.x - this.lengths.x / 2, center.y - this.lengths.y / 2),
+            createVector(center.x + this.lengths.x / 2, center.y + this.lengths.y / 2)
+        ]);
     }
 
     setData(data){
@@ -43,9 +59,9 @@ class Layer{
     draw(){
         switch (this.type){
             case "text":
-                //this.lengths = p5.Vector.add(this.firstCorner, this.secondCorner);
+                this.lengths = p5.Vector.sub(this.getDownCorner(), this.getUpperCorner());
                 fill(255);
-                text(this.data,this.upperCorner.x,this.upperCorner.y,this.downCorner.x,this.downCorner.y);
+                text(this.getData(),this.getCenter().x,this.getCenter().y);
                 break;
             case "image":
                 imageMode(CORNERS);

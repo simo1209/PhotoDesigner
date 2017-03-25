@@ -14,6 +14,15 @@ body {
   text-align: center;
 
   clear: both;
+
+  width: 100%;
+  display: block;
+}
+
+#butoni1{
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .button{
@@ -52,6 +61,24 @@ A{
 .photo{
   border-radius: 30px;
 
-  width: 756px;
+  width: 100%;
   height: inherit;
+}
+
+.imput {
+  display: block;
+  margin: 1em auto;
+
+  border-radius: 10px;
+}
+
+.imput1{
+  display: block;
+  margin: 1em auto;
+
+  border-radius: 10px;
+}
+
+#ukazanie{
+  text-align: center;
 }

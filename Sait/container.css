@@ -1,0 +1,65 @@
+#zaglavie{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 40px;
+
+  color: #000000;
+  background-color: #inherit;
+
+  padding: 10px;
+}
+
+#reclama1{
+  width: 10%;
+  float: left;
+
+  height: 600px;
+  min-width: 10%;
+}
+
+#reclama2{
+  width: 10%;
+  float: right;
+
+  height: 600px;
+  min-width: 10%;
+}
+
+#programa{
+  width: 80%;
+  float: left;
+
+  min-height: 300px;
+}
+
+/*---oformlenie na glavnata stranica---*/
+
+#cell1{
+  float: left;
+  width: 50%;
+}
+
+#cell2{
+  float: right;
+  width: 50%;
+}
+
+#cell3{
+  float: left;
+  width: 50%;
+}
+
+#cell4{
+  float: right;
+  width: 50%;
+}
+
+#P1{
+  text-align: right;
+  padding: 20px;
+}
+
+#P2{
+  text-align: left;
+  padding: 20px;
+}
