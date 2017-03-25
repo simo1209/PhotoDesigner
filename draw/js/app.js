@@ -20,7 +20,14 @@ function canvasResize() {
 
 function onTextChange() {
     background(currentBG);
+
     currentEl.setData(uiObjects.textInp.value());
+
+    currentEl.setCorners([
+        createVector(currentEl.getCenter().x - textWidth(this.value() / 2), currentEl.getCenter().y - textSize() / 2),
+        createVector(currentEl.getCenter().x + textWidth(this.value() / 2), currentEl.getCenter().y + textSize() / 2)
+    ]);
+
     currentEl.draw();
 }
 
@@ -42,7 +49,7 @@ function onTextAdd() {
         "text"
     );
     layers.push(currentEl);
-    
+
 }
 
 
@@ -79,13 +86,13 @@ function setup() {
     textSize(48);
     textAlign(CENTER, CENTER);
 
-    /*let inpTxt="Hello World";
+    /*let inpcurrentEl="Hello World";
     currentEl = new Layer(
         [
-            createVector(width/2-textWidth(inpTxt)/2,height/2-textSize()/2),
-            createVector(width/2+textWidth(inpTxt)/2,height/2+textSize()/2)
+            createVector(width/2-textWidth(inpcurrentEl)/2,height/2-textSize()/2),
+            createVector(width/2+textWidth(inpcurrentEl)/2,height/2+textSize()/2)
         ],
-        inpTxt,
+        inpcurrentEl,
         "text"
     );
     
