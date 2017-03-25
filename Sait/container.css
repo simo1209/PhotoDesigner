@@ -141,3 +141,10 @@
   font-weight: bold;
   text-align: center;
 }
+
+/*---oformlenie na za sazdatelite---*/
+
+#za_sazdatelite{
+  clear: both;
+  padding: 10px;
+}
