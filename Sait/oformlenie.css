@@ -53,9 +53,11 @@ A{
   text-align: center;
 
   color: #000000;
-  background-color: inherit;
+  background-color: #cdcaa9;
 
   vertical-align: middle;
+
+  overflow: auto;
 }
 
 .photo{
