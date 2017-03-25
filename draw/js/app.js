@@ -1,16 +1,63 @@
+let currentEl;
+let layers=new Array();
+let uiObjects={};
+let currentBG="#000000";
+
+function containCoords(corners,coords){
+    return corners[0].x <= coords.x && corners[0].y <= coords.y &&  corners[1].x>=coords.x && corners[1].y>=coords.y;
+}
+
 function setup(){
-    createCanvas(600, 400);
-    background(51);
-    textSize(12);
-    let exampleLayer = new Layer(
+
+    
+    uiObjects.canvas=createCanvas(600, 400);
+    background(currentBG);
+    textSize(48);
+    textAlign(CENTER, CENTER);
+
+    let inpTxt="Hello World";
+    currentEl = new Layer(
         [
-            createVector(0, 0),
-            createVector(400,200)
+            createVector(width/2-textWidth(inpTxt)/2,height/2-textSize()/2),
+            createVector(width/2+textWidth(inpTxt)/2,height/2+textSize()/2)
         ],
-        "Hello World",
+        inpTxt,
         "text"
     );
-    exampleLayer.draw();
-    exampleLayer.drawBorder();
+    
+    currentEl.draw();
+    layers.push(currentEl);
+}
+
+function mousePressed(){
+    background(currentBG);
+    for(let i=0;i<layers.length;i++){
+        layers[i].draw();
+        if (            
+            layers[i].getUpperCorner().x <= mouseX &&
+            layers[i].getDownCorner().x >= mouseX &&
+            layers[i].getUpperCorner().y <= mouseY &&
+            layers[i].getDownCorner().y >= mouseY
+        ){
+            currentEl=layers[i];
+            currentEl.drawBorder();
+        }
+    }
+}
+
+function mouseDragged(){
+    background(currentBG);
+    for(let i=0;i<layers.length;i++){
+        layers[i].draw();
+        if (            
+            containCoords([layers[i].getUpperCorner(),layers[i].getDownCorner()],createVector(mouseX,mouseY))
+        ){
+            currentEl=layers[i];
+            currentEl.setCenter(
+                createVector(mouseX,mouseY)
+            );
+            currentEl.drawBorder();
+        }
+    }
 }
 
