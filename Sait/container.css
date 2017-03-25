@@ -64,3 +64,25 @@
   padding: 20px;
 }
 
+/*---oformlenie na your profile---*/
+
+#ime{
+  width: 100%;
+  display: block;
+
+  font-size: 3em;
+  text-align: center;
+}
+
+#snimka{
+  float: left;
+  width: 50%;
+}
+
+#opisanie{
+  float: right;
+  width: 50%;
+
+  text-align: left;
+  font-size: 2em;
+}
