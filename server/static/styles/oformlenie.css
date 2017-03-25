@@ -1,0 +1,84 @@
+body {
+  color: inherit;
+  background-color: #cdcaa9;
+
+  font-family: inherit;
+}
+
+.butoni{
+  padding: 5px;
+  border-radius: 20px;
+
+  background-color: #fec449;
+
+  text-align: center;
+
+  clear: both;
+
+  width: 100%;
+  display: block;
+}
+
+#butoni1{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.button{
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px black solid;
+
+  background-color: #efefc9;
+  color: inherit;
+
+  font-family: inherit;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: inherit;
+}
+
+.button:hover{
+  background: #adc66a;
+}
+
+A{
+  color: #000000;
+}
+
+.text {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+
+  color: #000000;
+  background-color: inherit;
+
+  vertical-align: middle;
+}
+
+.photo{
+  border-radius: 30px;
+
+  width: 100%;
+  height: inherit;
+}
+
+.imput {
+  display: block;
+  margin: 1em auto;
+
+  border-radius: 10px;
+}
+
+.imput1{
+  display: block;
+  margin: 1em auto;
+
+  border-radius: 10px;
+}
+
+#ukazanie{
+  text-align: center;
+}
