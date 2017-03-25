@@ -7,6 +7,8 @@ class Layer{
         this.lengths = p5.Vector.add(this.upperCorner, this.downCorner);
     }
 
+    
+
     getData(){
         return this.data;
     }
