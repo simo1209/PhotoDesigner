@@ -1,5 +1,4 @@
 $(function() {
-  $(".photo").click(function() {
-    $(".photo").fadeIn(500)
-  });
+  $(".photo").fadeOut(0);
+  $(".photo").fadeIn(2000);
 });
