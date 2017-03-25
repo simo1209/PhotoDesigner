@@ -4,7 +4,7 @@ class Layer{
         this.upperCorner=corners[0];
         this.downCorner=corners[1];
         this.type=type;
-        this.lengths = p5.Vector.add(this.upperCorner, this.downCorner);
+        this.lengths = p5.Vector.add(corners[0], corners[1]);
     }
 
     
@@ -14,7 +14,7 @@ class Layer{
     }
 
     getCenter(){
-        this.lengths = p5.Vector.add(this.upperCorner, this.downCorner);
+        this.lengths = p5.Vector.add(this.getUpperCorner(), this.getDownCorner());
         return p5.Vector.div(this.lengths,2);
     }
 
@@ -67,10 +67,10 @@ class Layer{
                 imageMode(CORNERS);
                 image(
                     this.data, 
-                    this.upperCorner.x,
-                    this.upperCorner.y,
-                    this.downCorner.x,
-                    this.downCorner.y
+                    this.getUpperCorner().x,
+                    this.getUpperCorner().y,
+                    this.getDownCorner().x,
+                    this.getDownCorner().y
                 );
                 break;
         }

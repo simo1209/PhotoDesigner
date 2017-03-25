@@ -71,7 +71,11 @@ A{
   display: block;
   margin: 1em auto;
 
+  width: 30%;
+  height: 30px;
+
   border-radius: 10px;
+  font-size: 2em;
 }
 
 .imput1{
@@ -83,4 +87,6 @@ A{
 
 #ukazanie{
   text-align: center;
+  font-size: 2em;
+  padding: 0px;
 }
