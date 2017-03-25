@@ -1,0 +1,57 @@
+body {
+  color: inherit;
+  background-color: #cdcaa9;
+
+  font-family: inherit;
+}
+
+.butoni{
+  padding: 5px;
+  border-radius: 20px;
+
+  background-color: #fec449;
+
+  text-align: center;
+
+  clear: both;
+}
+
+.button{
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px black solid;
+
+  background-color: #efefc9;
+  color: inherit;
+
+  font-family: inherit;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: inherit;
+}
+
+.button:hover{
+  background: #adc66a;
+}
+
+A{
+  color: #000000;
+}
+
+.text {
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+
+  color: #000000;
+  background-color: inherit;
+
+  vertical-align: middle;
+}
+
+.photo{
+  border-radius: 30px;
+
+  width: 756px;
+  height: inherit;
+}
