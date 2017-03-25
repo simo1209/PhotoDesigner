@@ -1,15 +1,16 @@
 function mousePressed() {
-    background(currentBG);
+    //background(currentBG);
     for (let i = 0; i < layers.length; i++) {
         layers[i].draw();
         if (
-            layers[i].getUpperCorner().x <= mouseX &&
-            layers[i].getDownCorner().x >= mouseX &&
-            layers[i].getUpperCorner().y <= mouseY &&
-            layers[i].getDownCorner().y >= mouseY
+            containCoords([layers[i].getUpperCorner(), layers[i].getDownCorner()], createVector(mouseX, mouseY))
         ) {
+
             currentEl = layers[i];
             currentEl.drawBorder();
+            
+
+            
         }
     }
 }

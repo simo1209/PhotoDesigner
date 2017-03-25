@@ -2,6 +2,7 @@ let currentEl;
 let layers = new Array();
 let uiObjects = {};
 let currentBG = "#000000";
+let usePencil=false;
 
 function containCoords(corners, coords) {
     return corners[0].x <= coords.x && corners[0].y <= coords.y && corners[1].x >= coords.x && corners[1].y >= coords.y;
@@ -43,8 +44,33 @@ function setup() {
     );
 
     uiObjects.canvasHeight = createInput(height).input(canvasResize).parent(uiObjects.canvasResizeDiv);
+
+    createButton("Pencil").mousePressed(function(){
+        usePencil=!usePencil;
+    });
+
+    //send the image in base64
+    uiObjects.sendImage=createButton("Save image").mousePressed(function(){
+        //console.log();
+        $.ajax({
+            type:"POST",
+            url:"/edit",
+            data:uiObjects.canvas.elt.toDataURL(),
+            success:()=>{
+                
+            }
+        });
+        
+    }).parent(uiObjects.AsideDiv);
+
+    createSpan("<br>").parent(
+        uiObjects.AsideDiv
+    );
+
     background(currentBG);
     textSize(48);
+    stroke(255);
+    //strokeWeight(7);
     textAlign(CENTER, CENTER);
 
     /*let inpcurrentEl="Hello World";
@@ -62,7 +88,9 @@ function setup() {
 }
 
 function draw() {
-
+    if(usePencil){
+        line(mouseX,mouseY,mouseX,mouseY);
+    }
 }
 
 

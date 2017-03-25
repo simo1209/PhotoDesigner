@@ -19,4 +19,7 @@ function canvasResize() {
 function canvasChangeBG() {
     currentBG = uiObjects.canvasBG.value();
     background(currentBG);
+    for (let i = 0; i < layers.length; i++) {
+        layers[i].draw();
+    }
 }

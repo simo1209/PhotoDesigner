@@ -7,7 +7,13 @@ class Layer{
         this.lengths = p5.Vector.add(corners[0], corners[1]);
     }
 
-    
+    getType(){
+        return this.type;
+    }
+
+    setType(type){
+        this.type=type;
+    }
 
     getData(){
         return this.data;
