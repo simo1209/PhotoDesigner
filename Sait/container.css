@@ -82,7 +82,9 @@
 #opisanie{
   float: right;
   width: 50%;
+  max-height: 500px;
 
   text-align: left;
-  font-size: 2em;
+  font-size: 3em;
+  overflow: auto;
 }
