@@ -15,14 +15,8 @@ body {
 
   clear: both;
 
-  width: 100%;
-  display: block;
-}
-
-#butoni1{
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  /*width: 100%;*/
+  /*display: block;*/
 }
 
 .button{
