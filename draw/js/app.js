@@ -4,8 +4,7 @@ let uiObjects = {};
 let currentBG = "#000000";
 let usePencil = false;
 let pencilSize = 12;
-let lastPos = { x: -1, y: -1 };
-let pencilColor="#FFFFFF";
+let pencilColor = "#FFFFFF";
 
 function containCoords(corners, coords) {
     return corners[0].x <= coords.x && corners[0].y <= coords.y && corners[1].x >= coords.x && corners[1].y >= coords.y;
@@ -59,34 +58,31 @@ function setup() {
             data: uiObjects.canvas.elt.toDataURL(),
             success: (data) => {
                 console.log(data);
-                
+
             }
         });
 
     }).parent(uiObjects.AsideDiv);
 
     newLine();
-
-    uiObjects.pencil = createButton("Pencil").mousePressed(() => {
-        usePencil = !usePencil;
-    }).parent(uiObjects.AsideDiv);
-
-
-    uiObjects.pencilResizer = createInput("Size").input(() => {
-        pencilSize = uiObjects.pencilResizer.value();
-    }).parent(uiObjects.AsideDiv);
-
-    uiObjects.pencilColor=createInput(invertHex(currentBG), "color").input(()=>{
-        console.log(uiObjects.pencilColor.value());
-        
-        pencilColor=uiObjects.pencilColor.value();
-    }).parent(uiObjects.AsideDiv);
+    /*
+        uiObjects.pencil = createButton("Pencil").mousePressed(() => {
+            usePencil = !usePencil;
+        }).parent(uiObjects.AsideDiv);
+    
+    
+        uiObjects.pencilResizer = createInput("Size").input(() => {
+            pencilSize = uiObjects.pencilResizer.value();
+        }).parent(uiObjects.AsideDiv);
+    
+        uiObjects.pencilColor=createInput(invertHex(currentBG), "color").input(()=>{
+            pencilColor=uiObjects.pencilColor.value();
+        }).parent(uiObjects.AsideDiv);*/
 
 
 
     background(currentBG);
     textSize(48);
-    strokeWeight(8);
     textAlign(CENTER, CENTER);
 
 

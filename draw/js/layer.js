@@ -86,7 +86,6 @@ class Layer{
         rectMode(CORNERS);
         fill(0, 0, 0, 0);
         stroke(255);
-            stroke(1);
 
         rect(
             this.upperCorner.x, 

@@ -1,4 +1,6 @@
 function fileGet(f) {
+    
+
     background(currentBG);
     for (let i = 0; i < layers.length; i++) {
         layers[i].draw();
@@ -25,16 +27,12 @@ function fileGet(f) {
         uiObjects.sliderW.parent(
             uiObjects.AsideDiv
         );
-        createSpan("<br>").parent(
-            uiObjects.AsideDiv
-        );
+        newLine();
 
         uiObjects.sliderH.parent(
             uiObjects.AsideDiv
         );
-        createSpan("<br>").parent(
-            uiObjects.AsideDiv
-        );
+        newLine();
     }
 
     currentEl = new Layer(
@@ -49,13 +47,16 @@ function fileGet(f) {
 
     currentEl.draw();
     currentEl.drawBorder();
+
+
+    uiObjects.textInp.hide();
+    uiObjects.textSiz.hide();
     //image(img, 0, 0, width, height);
 }
 
 function sliderChange() {
     //console.log(this.value());
     background(currentBG);
-    stroke(0);
     fill(currentBG);
     //rect(0, 0, width - 1, height - 1);
 
