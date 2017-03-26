@@ -20,6 +20,11 @@
       <div ID="ukazanie"><label class="imput1" for="Password"> Password </label></div>
       <input class="imput" type="password" name="passwd">
 
+      {% if error == 3 %}
+        <h2 id="error"> Email or username not registered </h2>
+      {% elif error == 2 %}
+        <h2 id="error"> Incorrect password </h2>
+      {% endif %}
       <input class="imput1" type="submit" value="Submit" name="submit">
     </form>
     <div class="butoni" ID="butoni1">

@@ -26,6 +26,13 @@
       <div ID="ukazanie"><label class="imput1" for="confirm-pass"> Confirm Password: </label></div>
       <input class="imput" type="password" name="confirm-pass">
 
+      {% if error == 2 %}
+        <h2 id="error"> Email already taken </h2>
+      {% elif error == 3 %}
+        <h2 id="error"> Passwords don't match </h2>
+      {% elif error == 4 %}
+        <h2 id="error"> Email doesn't exist </h2>
+      {% endif %}
       <input class="imput1" type="submit" value="Submit" name="submit">
     </form>
     <div class="butoni" ID="butoni1">
