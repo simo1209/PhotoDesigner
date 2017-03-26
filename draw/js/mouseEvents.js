@@ -1,5 +1,4 @@
 function mousePressed() {
-    //background(currentBG);
     for (let i = 0; i < layers.length; i++) {
         layers[i].draw();
         if (
@@ -16,7 +15,14 @@ function mousePressed() {
 }
 
 function mouseDragged() {
-    background(currentBG);
+        stroke(1);
+    if(usePencil){
+        fill(pencilColor);
+        stroke(pencilColor);
+        ellipse(mouseX, mouseY, parseInt(pencilSize));
+    }
+
+    //background(currentBG);
     for (let i = 0; i < layers.length; i++) {
         layers[i].draw();
         if (

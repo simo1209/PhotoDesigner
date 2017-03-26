@@ -1,6 +1,6 @@
 function onTextChange() {
     background(currentBG);
-
+    stroke(1);
 
 
     currentEl.setData(uiObjects.textInp.value());
@@ -18,6 +18,7 @@ function onTextChange() {
 }
 
 function onTextAdd() {
+        stroke(1);
 
     background(currentBG);
 
@@ -29,7 +30,7 @@ function onTextAdd() {
         uiObjects.AsideDiv
     );
 
-    if (!uiObjects.textInp && !uiObjects.textSiz) {
+    if (!uiObjects.textInp && !uiObjects.textSiz && !uiObjects.textFont && !uiObjects.textFont) {
         createSpan("<br>").parent(
             uiObjects.AsideDiv
         );
@@ -72,6 +73,8 @@ function onTextAdd() {
 }
 
 function onFontChanged(){
+        stroke(1);
+
     console.log(uiObjects.textFont.value());
     
 }
