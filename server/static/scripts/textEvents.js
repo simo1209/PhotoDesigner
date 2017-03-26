@@ -2,22 +2,28 @@ function onTextChange() {
     background(currentBG);
 
 
-
     currentEl.setData(uiObjects.textInp.value());
 
     currentEl.setCorners([
-        createVector(currentEl.getCenter().x - textWidth(this.value())/2, currentEl.getCenter().y - textSize() / 2),
-        createVector(currentEl.getCenter().x + textWidth(this.value())/2, currentEl.getCenter().y + textSize() / 2)
+        createVector(currentEl.getCenter().x - textWidth(this.value()) / 2, currentEl.getCenter().y - textSize() / 2),
+        createVector(currentEl.getCenter().x + textWidth(this.value()) / 2, currentEl.getCenter().y + textSize() / 2)
     ]);
+
 
     //currentEl.draw();
 
     for (let i = 0; i < layers.length; i++) {
         layers[i].draw();
+
     }
+
+    uiObjects.sliderW.hide();
+    uiObjects.sliderH.hide();
 }
 
 function onTextAdd() {
+
+    
 
     background(currentBG);
 
@@ -48,30 +54,24 @@ function onTextAdd() {
             }
         }).parent(uiObjects.AsideDiv);
 
-        uiObjects.textFont=createSelect();
 
-        let fonts=["Arial","Verdana","Font"];
-        for(let i=0;i<fonts.length;i++){
-            uiObjects.textFont.option(fonts[i]);
-        }
-        uiObjects.textFont.changed(onFontChanged);
-        
-        
+
+
     }
 
+    //Create centered text layer
     currentEl = new Layer(
         [
-            createVector(width / 2 - textWidth(uiObjects.textInp.value())/2, height / 2 - textSize() / 2),
-            createVector(width / 2 + textWidth(uiObjects.textInp.value())/2, height / 2 + textSize() / 2)
+            createVector(width / 2 - textWidth(uiObjects.textInp.value()) / 2, height / 2 - textSize() / 2),
+            createVector(width / 2 + textWidth(uiObjects.textInp.value()) / 2, height / 2 + textSize() / 2)
         ],
         uiObjects.textInp.value(),
         "text"
     );
     layers.push(currentEl);
 
+
+    uiObjects.sliderW.hide();
+    uiObjects.sliderH.hide();
 }
 
-function onFontChanged(){
-    console.log(uiObjects.textFont.value());
-    
-}
