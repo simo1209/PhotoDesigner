@@ -112,7 +112,7 @@ def edit():
         conn.commit()
         return "True"
 
-@app.route('/about_cretors')
+@app.route('/about_creators')
 def about():
     return render_template('about.html')
 

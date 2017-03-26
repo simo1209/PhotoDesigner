@@ -23,7 +23,7 @@ function setup() {
 
     uiObjects.canvas = createCanvas(600, 400);
     uiObjects.canvasResizeDiv = createDiv("");
-    uiObjects.AsideDiv = createDiv("").position(width * 101 / 100, 0);
+    uiObjects.AsideDiv = createDiv("").position(width * 101 / 100, 100);
     uiObjects.canvasBG = createInput(currentBG, "color").input(canvasChangeBG).parent(uiObjects.AsideDiv);
 
     newLine();
