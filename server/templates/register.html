@@ -1,15 +1,36 @@
-<form action="/register/" method="post">
-  <label for="uname"> Username </label> <br>
-  <input type="text" name="uname"> <br>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Create profile</title>
+    <meta charset="utf-8">
+    <link href="/static/styles/oformlenie.css" rel="stylesheet" type="text/css">
+    <link href="/static/styles/container.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="butoni">
+      <A HREF="/"><button class="button" onclick="/"> Home </button></A>
+      <A HREF="/profile"><button class="button" onvlick="/"> My Profile </button></A>
+      <A HREF="/edit"><button class="button" onclick="/"> Programe </button></A>
+    </div>
+    <div ID="zaglavie">Here you can create your profile</div>
+    <form class="imputi" method="post" action="/register/">
+      <div ID="ukazanie"><label class="imput1" for="email"> Your Email: </label></div>
+      <input class="imput" type="text" name="email">
 
-  <label for="email"> Email </label> <br>
-  <input type="text" name="email"> <br>
+      <div ID="ukazanie"><label class="imput1" for="uname"> Username: </label></div>
+      <input class="imput" type="text" name="uname">
 
-  <label for="passwd"> Password </label> <br>
-  <input type="password" name="passwd"> <br>
+      <div ID="ukazanie"><label class="imput1" for="paswd"> Password: </label></div>
+      <input class="imput" type="password" name="passwd">
 
-  <label for="confirm-pass"> Confirm Password </label> <br>
-  <input type="password" name="confirm-pass"> <br>
+      <div ID="ukazanie"><label class="imput1" for="confirm-pass"> Confirm Password: </label></div>
+      <input class="imput" type="password" name="confirm-pass">
 
-  <input type="submit" value="Submit">
-</form>
+      <input class="imput1" type="submit" value="Submit" name="submit">
+    </form>
+    <div class="butoni" ID="butoni1">
+      <A HREF="/"><button class="button" onvlick="/"> Bulgarian </button></A>
+      <A HREF="/"><button class="button" onclick="/"> English </button></A>
+    </div>
+  </body>
+</html>

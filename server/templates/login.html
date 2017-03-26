@@ -1,9 +1,30 @@
-<form action="/login/" method="post">
-  <label for="email"> Email </label> <br>
-  <input type="text" name="email"> <br>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Create profile</title>
+    <meta charset="utf-8">
+    <link href="/static/styles/oformlenie.css" rel="stylesheet" type="text/css">
+    <link href="/static/styles/container.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="butoni">
+      <A HREF="/"><button class="button"> Home </button></A>
+      <A HREF="/profile"><button class="button"> My Profile </button></A>
+      <A HREF="/edit"><button class="button"> Programe </button></A>
+    </div>
+    <div ID="zaglavie">Please log in!</div>
+    <form class="imputi" method="post" action="/login/">
+      <div ID="ukazanie"><label class="imput1" for="Email"> EMAIL </label></div>
+      <input class="imput" type="text" name="email">
 
-  <label for="passwd"> Password </label> <br>
-  <input type="password" name="passwd"> <br>
+      <div ID="ukazanie"><label class="imput1" for="Password"> Password </label></div>
+      <input class="imput" type="password" name="passwd">
 
-  <input type='submit' value="Submit">
-</form>
+      <input class="imput1" type="submit" value="Submit" name="submit">
+    </form>
+    <div class="butoni" ID="butoni1">
+      <A HREF="/"><button class="button"> Bulgarian </button></A>
+      <A HREF="/"><button class="button"> English </button></A>
+    </div>
+  </body>
+</html>
