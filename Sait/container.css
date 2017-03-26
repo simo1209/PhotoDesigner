@@ -2,6 +2,7 @@
   text-align: center;
   font-family: fantasy;
   font-size: 40px;
+  text-shadow: gray 1mm 1mm 1px;
 
   color: #000000;
   background-color: #inherit;
@@ -113,19 +114,9 @@
 }
 
 #butoni{
-  background-color: #fec449;
-  border-radius: 20px;
-
-  padding: 10px;
-  clear: both;
-  text-align: center;
-
-  width: 100%;
-  display: block;
-
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
+  position: absolute;
+  width: 99%;
 }
 
 .button1{
