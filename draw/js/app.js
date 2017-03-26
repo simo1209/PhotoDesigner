@@ -20,10 +20,10 @@ function newLine() {
 
 function setup() {
 
-
-    uiObjects.canvas = createCanvas(600, 400);
-    uiObjects.canvasResizeDiv = createDiv("");
-    uiObjects.AsideDiv = createDiv("").position(width * 101 / 100, 0);
+    uiObjects.full=createDiv("").id("primaryDiv");
+    uiObjects.canvas = createCanvas(600, 400).parent(uiObjects.full);
+    uiObjects.canvasResizeDiv = createDiv("").parent(uiObjects.full);
+    uiObjects.AsideDiv = createDiv("").position(width * 101 / 100, 0).parent(uiObjects.full);
     uiObjects.canvasBG = createInput(currentBG, "color").input(canvasChangeBG).parent(uiObjects.AsideDiv);
 
     newLine();
@@ -54,7 +54,7 @@ function setup() {
         //console.log();
         $.ajax({
             type: "POST",
-            url: "/edit",
+            url: "/save",
             data: uiObjects.canvas.elt.toDataURL(),
             success: (data) => {
                 console.log(data);
